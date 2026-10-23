@@ -48,3 +48,18 @@ fun TampilData(
                 modifier = Modifier.padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+                // Menampilkan setiap data dan garis pemisah cyan
+                items.forEach { item ->
+                    Column {
+                        Text(text = item.first.uppercase(), fontSize = 16.sp) // Label
+                        Text(
+                            text = item.second, // Isi data
+                            fontWeight = FontWeight.Bold,
+                            fontFamily = FontFamily.Cursive,
+                            fontSize = 22.sp
+                        )
+                    }
+                    HorizontalDivider(thickness = 1.dp, color = Color.Cyan) // Garis pemisah
+                }
+
+                Spacer(modifier = Modifier.height(10.dp))
