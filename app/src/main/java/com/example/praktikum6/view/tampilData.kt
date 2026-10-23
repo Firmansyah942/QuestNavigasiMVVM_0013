@@ -13,13 +13,38 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.praktikum6.R
 
+// Fungsi utama TampilData dengan tombol kembali
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TampilData(
     onBackBtnClick: () -> Unit
 ) {
+    // Data yang akan ditampilkan (label dan isi)
     val items = listOf(
         Pair("Nama Lengkap", "Contoh Nama"),
         Pair("Jenis Kelamin", "Lainnya"),
         Pair("Alamat", "Yogyakarta")
     )
+
+    // Kerangka layar dengan TopAppBar berwarna Teal
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        topBar = {
+            TopAppBar(
+                title = { Text(text = "Tampil Data", color = Color.White) },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
+    ) { isiRuang ->
+        Column(
+            modifier = Modifier
+                .padding(isiRuang)
+                .fillMaxWidth(),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
