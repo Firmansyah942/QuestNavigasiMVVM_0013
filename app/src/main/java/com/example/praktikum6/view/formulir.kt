@@ -76,4 +76,21 @@ fun FormIsian(
                 color = Color.Red
             )
 
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                jenisK.forEach { item ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(horizontal = 8.dp)
+                    ) {
+                        RadioButton(
+                            selected = jenisKelaminPilih == item,
+                            onClick = { jenisKelaminPilih = item }
+                        )
+                        Text(text = item)
+                    }
+                }
             }
+
