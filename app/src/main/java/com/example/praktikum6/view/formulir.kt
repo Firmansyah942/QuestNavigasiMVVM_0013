@@ -39,3 +39,15 @@ fun FormIsian(
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var jenisKelaminPilih by remember { mutableStateOf("") }
+
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        topBar = {
+            TopAppBar(
+                title = { Text("Home", color = Color.White) },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(R.color.teal_700)
+                )
+            )
+        }
+    ) }
