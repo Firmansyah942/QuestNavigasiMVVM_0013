@@ -17,3 +17,14 @@ enum class Navigasi {
     Detail
 }
 
+// Fungsi utama Navigasi menggunakan NavHost
+@Composable
+fun DataApp(
+    navController: NavHostController = rememberNavController()
+) {
+    Scaffold { isiRuang ->
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.FormulirSaya.name,
+            modifier = Modifier.padding(isiRuang)
+        ) {
