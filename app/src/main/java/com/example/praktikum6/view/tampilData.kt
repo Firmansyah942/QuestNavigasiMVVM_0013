@@ -63,3 +63,15 @@ fun TampilData(
                 }
 
                 Spacer(modifier = Modifier.height(10.dp))
+
+                // Tombol Kembali
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = onBackBtnClick
+                ) {
+                    Text(text = "Back")
+                }
+            }
+        }
+    }
+}
