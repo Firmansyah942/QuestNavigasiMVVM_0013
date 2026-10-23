@@ -45,3 +45,10 @@ fun DataApp(
         }
     }
 }
+
+// Fungsi bantu untuk kembali ke halaman formulir
+private fun cancelAndBackToFormulirSaya(
+    navController: NavHostController
+) {
+    navController.popBackStack(route = Navigasi.FormulirSaya.name, inclusive = false)
+}
